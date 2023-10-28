@@ -71,6 +71,7 @@ body {
 }
 
 .color > span {
+  font-size: 0.8rem;
   background-color: #ffffffcc;
   padding: 1em 0;
   font-weight: bold;
@@ -105,4 +106,10 @@ body {
 #color-4 {
   background-color: #6a6262;
   grid-area: color-4;
+}
+
+@media (min-width:768px) {
+  .color > span {
+    font-size: 1.2em;
+  }
 }
