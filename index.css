@@ -1,0 +1,108 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 99vh;
+}
+
+.container {
+  background-color: #ffffff;
+  height: 60%;
+  max-height: 700px;
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-rows: 90px 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    "settings settings settings settings settings"
+    "color-0 color-1 color-2 color-3 color-4";
+}
+
+.settings-panel {
+  grid-area: settings;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 1.5em 1em;
+}
+
+.settings-panel > input[type="color"],
+.settings-panel > select,
+.settings-panel > button {
+  border: 1px solid #bfbfbf;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.settings-panel > select,
+.settings-panel > button {
+  font-family: "Inter", sans-serif;
+}
+
+.settings-panel > input[type="color"] {
+  height: 100%;
+  flex-basis: 60px;
+  border: 0;
+}
+
+.settings-panel > select {
+  flex: auto;
+  padding-left: 0.5em;
+}
+
+.settings-panel > button {
+  padding: 0 1em;
+  background-color: #ffffff;
+  transition: background-color 300ms;
+}
+
+.settings-panel > button:hover {
+  background-color: #bfbfbf;
+}
+
+.color {
+  position: relative;
+  min-width: max-content;
+  text-align: center;
+}
+
+.color > span {
+  background-color: #ffffffcc;
+  padding: 1em 0;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: opacity 300ms;
+}
+
+.color > span:hover {
+  opacity: 80%;
+}
+
+#color-0 {
+  background-color: #000000;
+  grid-area: color-0;
+}
+#color-1 {
+  background-color: #1a1919;
+  grid-area: color-1;
+}
+#color-2 {
+  background-color: #343232;
+  grid-area: color-2;
+}
+#color-3 {
+  background-color: #4f4a4a;
+  grid-area: color-3;
+}
+#color-4 {
+  background-color: #6a6262;
+  grid-area: color-4;
+}

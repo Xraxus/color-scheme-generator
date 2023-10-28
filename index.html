@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Color scheme generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="settings-panel" id="color-form">
+        <input
+          type="color"
+          value="#000000"
+          aria-label="Pick a color"
+          id="color-input"
+        />
+        <select aria-label="Pick a scheme mode" id="mode-selector">
+          <option value="monochrome">Monochrome</option>
+          <option value="monochrome-dark">Monochrome Dark</option>
+          <option value="monochrome-light">Monochrome Light</option>
+          <option value="analogic">Analogic</option>
+          <option value="complement">Complement</option>
+          <option value="analogic-complement">Analogic Complement</option>
+          <option value="triad">Triad</option>
+          <option value="quad">Quad</option>
+        </select>
+        <button type="submit">Get color scheme</button>
+      </form>
+      <div class="color" id="color-0"><span>#000000</span></div>
+      <div class="color" id="color-1"><span>#1A1919</span></div>
+      <div class="color" id="color-2"><span>#343232</span></div>
+      <div class="color" id="color-3"><span>#4F4A4A</span></div>
+      <div class="color" id="color-4"><span>#6A6262</span></div>
+    </div>
+  </body>
+</html>
