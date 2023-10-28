@@ -6,7 +6,6 @@ colorForm.addEventListener("submit", function (e) {
   const colorInputVal = document.querySelector("#color-input").value.slice(1);
   const selectedMode = document.getElementById("mode-selector").value;
 
-  colorForm.reset();
   fetch(
     `https://www.thecolorapi.com/scheme?hex=${colorInputVal}&mode=${selectedMode}`
   )
